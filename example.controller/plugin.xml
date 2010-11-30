@@ -1,0 +1,87 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>example.controller</id>
+	<name>[Examples] Example Devblocks Controller</name>
+	<description>This sets up an example devblocks controller with example pages and tabs</description>
+	<author>WebGroup Media, LLC.</author>
+	<revision>0</revision>
+	<link>http://wiki.cerb5.com/wiki/Extension_Point:devblocks.controller</link>
+	
+    
+    <dependencies>
+		<require plugin_id="cerberusweb.core" version="5.1.0-dev" />
+	</dependencies>
+    
+	<!-- Exported Classes -->
+
+	<!--	
+	<class_loader>
+		<file path="api/App.php">
+		</file>
+	</class_loader>
+	-->
+	
+	<extensions>
+		<extension point="devblocks.controller">
+			<id>example.controller.example</id>
+			<name>Example Page Controller</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExPageController</name>
+			</class>
+			<params>
+				<param key="uri" value="examplecontroller" />
+			</params>
+		</extension>
+        
+        <!-- Pages -->
+        
+		<extension point="example.controller.page">
+			<id>example.home</id>
+			<name>Example Home Page</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExHomePage</name>
+			</class>
+			<params>
+				<param key="uri" value="home" />
+			</params>
+		</extension>				
+
+		<extension point="example.controller.page">
+			<id>example.test</id>
+			<name>Example Test Page</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExTestPage</name>
+			</class>
+			<params>
+				<param key="uri" value="test" />
+			</params>
+		</extension>		
+        <extension point="example.page.tab">
+			<id>example.page.tab.one</id>
+			<name>Example Page Tab One</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExHomeTabOne</name>
+			</class>
+			<params>
+				<param key="uri" value="exampleone" />
+    			<param key="title" value="example.page.tabone" />
+			</params>
+		</extension>
+        <extension point="example.page.tab">
+			<id>example.page.tab.two</id>
+			<name>Example Page Tab Two</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExHomeTabTwo</name>
+			</class>
+			<params>
+				<param key="uri" value="exampletwo" />
+    			<param key="title" value="example.page.tabtwo" />
+			</params>
+		</extension>
+	</extensions>
+</plugin>

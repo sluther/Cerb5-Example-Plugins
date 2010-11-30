@@ -1,0 +1,56 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>example.page</id>
+	<name>[Examples] Example Page</name>
+	<description>This example plugin adds an example page</description>
+	<author>WebGroup Media, LLC.</author>
+	<revision>0</revision>
+	<link>http://wiki.cerberusweb.com/wiki/5.x/Extension:cerberusweb.page</link>
+	
+    <!-- Plugin Dependencies -->
+	
+	<dependencies>
+		<require plugin_id="cerberusweb.core" version="5.1.0" />
+	</dependencies>
+    
+    <!-- Exported Classes -->
+   
+	<extensions>
+		<extension point="cerberusweb.page">
+			<id>example.page.page</id>
+			<name>Example Page</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExPage</name>
+			</class>
+			<params>
+				<param key="uri" value="example" />
+    			<param key="menutitle" value="example.page.title" />
+			</params>
+		</extension>
+        <extension point="example.page.tab">
+			<id>example.page.tab.one</id>
+			<name>Example Page Tab One</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExPageTabOne</name>
+			</class>
+			<params>
+				<param key="uri" value="exampleone" />
+    			<param key="title" value="example.page.tabone" />
+			</params>
+		</extension>
+        <extension point="example.page.tab">
+			<id>example.page.tab.two</id>
+			<name>Example Page Tab Two</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExPageTabTwo</name>
+			</class>
+			<params>
+				<param key="uri" value="exampletwo" />
+    			<param key="title" value="example.page.tabtwo" />
+			</params>
+		</extension>
+	</extensions>
+</plugin>

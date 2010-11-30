@@ -1,0 +1,39 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>example.login</id>
+	<name>[Examples] Example Login Adapter Plugin</name>
+	<description>Example login plugin</description>
+	<author>WebGroup Media, LLC.</author>
+	<revision>0</revision>
+	<link>http://www.cerberusweb.com/</link>
+	
+	<!-- Plugin Dependencies -->
+	
+	<dependencies>
+		<require plugin_id="cerberusweb.core" version="5.1.0-dev" />
+	</dependencies>
+	
+	<!-- Exported Classes -->
+
+	<!--	
+	<class_loader>
+		<file path="api/App.php">
+		</file>
+	</class_loader>
+	-->
+	
+	<extensions>
+		
+		<extension point="cerberusweb.login">
+			<id>example.login.adapter</id>
+			<name>Example Login Adapter</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExLoginAdapter</name>
+			</class>
+			<params>
+			</params>
+		</extension>
+		
+	</extensions>
+</plugin>

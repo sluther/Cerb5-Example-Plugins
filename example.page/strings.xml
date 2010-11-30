@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header datatype="winres" segtype="sentence" adminlang="en-us"
+		srclang="en-us" o-tmf="abc" />
+	<body>
+
+		<!-- Manifest -->
+		
+		<tu tuid='example.page.title'>
+			<tuv xml:lang="en_US"><seg>Example Page</seg></tuv>
+		</tu>
+        <tu tuid='example.page.tabone'>
+			<tuv xml:lang="en_US"><seg>Example Tab One</seg></tuv>
+		</tu>
+        <tu tuid='example.page.tabtwo'>
+			<tuv xml:lang="en_US"><seg>Example Tab Two</seg></tuv>
+		</tu>
+	</body>
+</tmx>
+<!-- 
+	
+-->

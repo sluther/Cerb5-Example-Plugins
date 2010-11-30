@@ -1,0 +1,52 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>example.context</id>
+	<name>[Examples] Example Devblocks Context</name>
+	<description>This sets up an example devblocks context</description>
+	<author>WebGroup Media, LLC.</author>
+	<revision>0</revision>
+	<link>http://wiki.cerb5.com/wiki/Extension_Point:devblocks.context</link>
+	
+    
+    <dependencies>
+		<require plugin_id="cerberusweb.core" version="5.1.0-dev" />
+	</dependencies>
+    
+	<!-- Exported Classes -->
+
+	<!--	
+	<class_loader>
+		<file path="api/App.php">
+		</file>
+	</class_loader>
+	-->
+	
+	<extensions>
+		<extension point="devblocks.context">
+			<id>example.context.example</id>
+			<name>Example Context</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExContext</name>
+			</class>
+			<params>
+				<param key="uri" value="examplecontroller" />
+			</params>
+		</extension>
+        
+        <!-- Pages -->
+        
+		<extension point="example.page">
+			<id>iphone.home</id>
+			<name>iPhone Home Page</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ChiPhoneHomePage</name>
+			</class>
+			<params>
+				<param key="uri" value="home" />
+			</params>
+		</extension>				
+
+	</extensions>
+</plugin>

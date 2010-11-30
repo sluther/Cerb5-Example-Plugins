@@ -1,0 +1,43 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>example.workspace.source</id>
+	<name>[Examples] Example Workspace Source</name>
+	<description>This plugin adds an example workspace source</description>
+	<author>WebGroup Media, LLC.</author>
+	<revision>0</revision>
+	<link>http://wiki.cerb5.com/wiki/Extension_Point:cerberusweb.workspace.source</link>
+	
+	<!-- Plugin Dependencies -->
+	
+	<dependencies>
+		<require plugin_id="cerberusweb.core" version="5.1.0-dev" />
+	</dependencies>
+	
+	<!-- Exported Classes -->
+
+	<!--	
+	<class_loader>
+		<file path="api/App.php">
+		</file>
+	</class_loader>
+	-->
+	
+	<extensions>
+    
+		<!-- Workspace Sources -->
+		
+		<extension point="cerberusweb.workspace.source">
+			<id>example.workspace.source.source</id>
+			<name>Example Source</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ExWorkspaceSource</name>
+			</class>
+			<params>
+				<param key="view_class" value="View_ExSource" />
+			</params>
+		</extension>
+		
+		
+	</extensions>
+</plugin>

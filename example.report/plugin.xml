@@ -1,0 +1,57 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>example.report</id>
+	<name>[Examples] Example Report</name>
+	<description>This plugin adds an example report to the reports page</description>
+	<author>WebGroup Media, LLC.</author>
+	<revision>0</revision>
+	<link>http://wiki.cerb5.com/wiki/Extension_Point:cerberusweb.report</link>
+	
+	<!-- Plugin Dependencies -->
+	
+	<dependencies>
+		<require plugin_id="cerberusweb.core" version="5.1.0-dev" />
+	</dependencies>
+	
+	<!-- Exported Classes -->
+
+	<!--	
+	<class_loader>
+		<file path="api/App.php">
+		</file>
+	</class_loader>
+	-->
+	
+	<extensions>
+    <!-- Report Groups -->
+
+	<extension point="cerberusweb.report.group">
+		<id>example.report.group</id>
+		<name>Example Report Group</name>
+		<class>
+			<file>api/App.php</file>
+			<name>ExReportGroup</name>
+		</class>
+		<params>
+			<param key="group_name" value="example.report.group" />
+		</params>
+	</extension>
+    
+	<!-- Reports -->
+
+	<extension point="cerberusweb.report">
+		<id>example.report.report</id>
+		<name>Example Report</name>
+		<class>
+			<file>api/App.php</file>
+			<name>ExReport</name>
+		</class>
+		<params>
+			<param key="report_name" value="example.report.title" />
+			<param key="report_group" value="example.report.group" />
+		</params>
+	</extension>
+		
+		
+	</extensions>
+</plugin>

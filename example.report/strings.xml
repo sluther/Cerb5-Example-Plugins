@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header datatype="winres" segtype="sentence" adminlang="en-us"
+		srclang="en-us" o-tmf="abc" />
+	<body>
+
+		<!-- Manifest -->
+		<tu tuid='example.report.group'>
+			<tuv xml:lang="en_US"><seg>Example Report Group</seg></tuv>
+		</tu>
+		<tu tuid='example.report.title'>
+			<tuv xml:lang="en_US"><seg>Example Report</seg></tuv>
+		</tu>
+        <tu tuid='example.report.usage'>
+			<tuv xml:lang="en_US"><seg>Example Report Usage Data</seg></tuv>
+		</tu>
+	</body>
+</tmx>
+<!-- 
+	
+-->
